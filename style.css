@@ -1,36 +1,104 @@
-*{
-    padding:0;
-    margin:0 0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 
-header{
-    background-color: rgb(0, 0, 0);
+header {
+    background-color: rgba(0, 0, 0, 0.199);
     height: 80px;
-    width:100%;
-    position:relative;
+    width: 100%;
+    position: fixed;
 }
-header ul{
-    position:absolute;
-    right:5vw;
+
+header ul {
+    position: absolute;
+    right: 5vw;
     top: 0;
-    line-height:80px;
+    line-height: 80px;
 }
-h1{
-    color:white;
-    position:absolute;
-    left:5vw;
-    top:0;
-    line-height:80px;
+
+h1 {
+    color: brown;
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    line-height: 80px;
 }
-header li{
-    display:inline;
-    margin-right:4vw;
+
+header li {
+    display: inline;
+    margin-right: 4vw;
 }
-header a{
-    color:white;
-    text-decoration:none;
+
+header a {
+    color: white;
+    text-decoration: none;
 }
-header a:hover{
-    text-decoration:underline red;
+
+header a:hover {
+    text-decoration: underline brown;
+}
+
+.wangzhanjieshao {
+    background-color: rgb(255, 174, 127);
+    color: black;
+    height: 80vh;
+    background-image: url(images);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wangzhanjieshao h2 {
+    font-size: 60px;
+    margin: 25px 0;
+}
+
+.menu {
+    display: none;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 20vh;
+    background-image: url(images);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 响应式设计语法 */
+@media screen and (max-width: 880px) {
+    header ul {
+        display: none;
+    }
+
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .wangzhanjieshao h2 {
+        font-size: 40px;
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
 }
